@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+:root {
+    --cor-principal: blue;
+}
+
+a {
+    color: var(--cor-principal)
+}
+#SSSS {
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+#a {
+    text-align: center;
+    background-color: white;
+}
+.b {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+body {
+    background-image: url("beach.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.686); /* White overlay with 80% opacity */
+    pointer-events: none; /* Allow clicks to pass through */
+    z-index: -1; /* Place it behind the content */
+}
