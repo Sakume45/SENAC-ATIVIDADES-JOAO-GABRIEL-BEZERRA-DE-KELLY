@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atv4</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora de troco</h1>
+    <button type="button" onclick="cadastrarProduto()">Cadastrar Produto</button>
+
+    <script>
+        function cadastrarProduto() {
+            let nomeProduto = prompt("Digite o nome do produto:");
+            if (!nomeProduto) {
+                alert("Nome do produto não pode ser vazio.");
+                return;
+            }
+
+            let precoProduto = parseFloat(prompt("Digite o preço do produto (use ponto para decimais):"));
+            if (isNaN(precoProduto) || precoProduto <= 0) {
+                alert("Preço inválido. Por favor, insira um número positivo.");
+                return;
+            }
+
+            let valorPago = parseFloat(prompt("Digite o valor pago pelo cliente (use ponto para decimais):"));
+            if (isNaN(valorPago) || valorPago < precoProduto) {
+                alert("Valor pago inválido. Deve ser maior ou igual ao preço do produto.");
+                return;
+            }
+
+            let troco = valorPago - precoProduto;
+            alert(`Produto: ${nomeProduto}\nPreço: R$ ${precoProduto.toFixed(2)}\nValor Pago: R$ ${valorPago.toFixed(2)}\nTroco: R$ ${troco.toFixed(2)}`);
+        }
+    </script>
+
+    <h2>João Gabriel B. de Kelly</h2>
+</body>
+</html>
