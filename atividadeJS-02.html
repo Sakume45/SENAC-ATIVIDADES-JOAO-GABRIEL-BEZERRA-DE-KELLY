@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Clique aqui para se cadastrar</h1>
+    <button type="button" onclick="clicou()">Cadastrar-se</button>
+
+    <script>
+        function clicou() {
+            let nome = window.prompt("Por favor, digite seu nome:");
+            window.alert(`Bem-vindo, ${nome}, poderia informar sua idade?`);
+            let idade = window.prompt("Por favor, digite sua idade:");
+            window.alert(`Obrigado por se cadastrar, ${nome}! Você tem ${idade} anos.`);
+        }
+    </script>
+
+    <h2>João Gabriel B. de Kelly</h2>
+</body>
+</html>
