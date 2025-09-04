@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atv3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <button type="button" onclick="alert('Por favor, insira um número inteiro qualquer')">Clique em mim!</button>
+
+    <script>
+        document.querySelector('button').addEventListener('click', function() {
+        const input = prompt('Por favor, insira um número inteiro qualquer');
+        const numero = parseInt(input, 10);
+
+        if (!isNaN(numero)) {
+            const antecessor = numero - 1;
+            const sucessor = numero + 1;
+            alert(`Número digitado: ${numero}\nAntecessor: ${antecessor}\nSucessor: ${sucessor}`);
+        } else {
+            alert('Por favor, insira um número inteiro válido.');
+        }
+    });
+    </script>
+
+    <h2>João Gabriel B. de Kelly</h2>
+</body>
+</html>
