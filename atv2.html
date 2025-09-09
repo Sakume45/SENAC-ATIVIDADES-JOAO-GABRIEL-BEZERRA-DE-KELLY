@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            align-items: center;
+        }
+        #quantia {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Clique no botão</h1>
+    <button onclick="button()">Clique aqui</button>
+    <section>
+        <p id="quantia">Clicado 0 vezes</p>
+    </section>
+    <script>
+        let count = 0;
+        function button() {
+            count++;
+            let click = document.getElementById('quantia');
+            click.innerHTML = `<p>Clicado ${count} vezes</p>`;
+        }
+    </script>
+
+    <h2>João Gabriel B. de Kelly</h2>
+</body>
+</html>

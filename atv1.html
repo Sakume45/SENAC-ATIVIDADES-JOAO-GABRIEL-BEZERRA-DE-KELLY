@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #resposta {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Seja bem vindo, por favor pressione o butão para registrar seu nome.</h1>
+    <button onclick="inicio()">Cadastrar-se</button>
+    <section>
+        <p id="resposta">A resposta vai ficar aqui!</p>
+    </section>
+    <script>
+        function inicio() {
+        let nome = window.prompt('Qual o seu nome?');
+        let solucao = document.getElementById('resposta');
+        solucao.innerHTML = `<p>Olá, ${nome}! Bem-vindo à nossa página.</p>`;
+        }
+    </script>
+    <h2>João Gabriel B. de Kelly</h2>
+</body>
+</html>
