@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Para converter em Fahrenheit e Kelvin, por favor insira uma temperatura em Celsius.</h1>
+    <button onclick="numero()">Clique aqui para começar</button>
+    <section id="resultado">NaN °F e NaN K</section>
+    <script>
+        function numero() {
+            let celsius = prompt("Digite uma temperatura em Celsius");
+            if (celsius !== null && !isNaN(celsius) && celsius.trim() !== "") {
+                let fahrenheit = (parseFloat(celsius) * 9/5) + 32;
+                let kelvin = parseFloat(celsius) + 273.15;
+                document.getElementById("resultado").innerHTML = fahrenheit.toFixed(2) + " °F e " + kelvin.toFixed(2) + " K";
+            } else {
+                alert("Por favor, digite um número válido.");
+            }
+        }
+    </script>
+
+    <p>por João Gabriel B. de Kelly</p>
+</body>
+</html>

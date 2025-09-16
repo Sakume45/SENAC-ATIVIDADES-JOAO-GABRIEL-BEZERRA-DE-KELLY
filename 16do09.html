@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+            font-size: 24px;
+            font-family: Arial, Helvetica, sans-serif
+        }
+    </style>
+</head>
+<body>
+    <h1>Abaixe, por favor digite uma distância para converter a milímetro.</h1>
+    <button onclick="numero()">Clique aqui para começar</button>
+    <section id="resultado">NaN milímetros</section>
+    <script>
+        function numero() {
+            let distancia = prompt("Digite uma distância em metros");
+            if (distancia !== null && !isNaN(distancia) && distancia.trim() !== "") {
+                let milimetro = parseFloat(distancia) * 1000;
+                document.getElementById("resultado").innerHTML = milimetro + " milímetros";
+            } else {
+                alert("Por favor, digite um número válido.");
+            }
+        }
+    </script>
+
+    <p>por João Gabriel B. de Kelly</p>
+</body>
+</html>
